@@ -4,7 +4,15 @@ const router = express.Router();
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  return res.status(200).send("/api");
+  return res.status(200).send({key: "value"});
+});
+
+router.post("/reqdemo", function (req, res, next) {
+  const params =req.params;
+  const query =req.query;
+  const body =req.body;
+
+  return sendResonse ;
 });
 
 const studentRoutes = require("./student.api.js");
